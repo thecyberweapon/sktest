@@ -8,4 +8,4 @@ chatid = os.environ.get("FORWARD_ID")
 
 
 async def sendmsg(text):
-     await Bot.send_message(chatid=chatid,text=text)
+     await Bot.send_message(chat_id=chatid,text=text)
