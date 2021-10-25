@@ -1,6 +1,6 @@
 import requests, random, string, os, asyncio,logging 
 from pyrogram import Client, filters
-from .bot_cmd import sendmsg
+from plugins.sendmsg import sendmsg
 log = logging.getLogger(__name__)
 
 chatid = os.environ.get("FORWARD_ID")
