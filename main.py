@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.DEBUG,
 log = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("requests").setLevel(logging.ERROR)
-
+logging.getLogger("urllib3").setLevel(logging.ERROR)
 
 bot_token = os.environ.get("BOT_TOKEN")
 chatid = os.environ.get("FORWARD_ID")
