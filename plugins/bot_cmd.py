@@ -26,4 +26,4 @@ async def _mstr_cmd(bot, vishal):
 
 
 async def sendmsg(text):
-     await Bot.send_message(text)
+     await Bot.send_message(chatid=chatid,text=text)
