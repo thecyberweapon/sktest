@@ -52,6 +52,13 @@ async def backgen():
       # await asyncio.sleep(0.2)
       await checksk("short")
 
+@Client.on_message(filters.private)
+async def backo(c,m):
+   if not Goat:
+      Goat = asyncio.create_task(backgen())
+   await m.continue_propagation()
+
+
 class Bot(Client):
 
     def __init__(self):
@@ -65,7 +72,7 @@ class Bot(Client):
 
     async def start(self):
         await super().start()
-        asyncio.create_task(backgen())
+        #asyncio.create_task(backgen())
         log.info("<<[Bot Started]>>")
     async def stop(self, *args):
         await super().stop()
