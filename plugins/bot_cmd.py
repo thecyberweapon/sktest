@@ -3,7 +3,7 @@ import pyrogram
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client as Bot
 from pyrogram import filters
-from .utils import validate
+from plugins.utils import validate
 chatid = os.environ.get("FORWARD_ID")
     
 @Bot.on_message(filters.private & filters.command(["start","help"]))
@@ -26,5 +26,3 @@ async def _mstr_cmd(bot, vishal):
     await m.reply("Done vro")
 
 
-async def sendmsg(text):
-     await Bot.send_message(chatid=chatid,text=text)
