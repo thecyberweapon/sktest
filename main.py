@@ -24,7 +24,6 @@ bot_token = os.environ.get("BOT_TOKEN")
 chatid = os.environ.get("FORWARD_ID")
 api_id = os.environ.get("APIID")
 api_hash = os.environ.get("APIHASH")
-Goat = False
 
 
 
