@@ -66,7 +66,8 @@ async def validate(app,skkey):
 
 async def backgen(app):
     print("Starting")
-    asyncio.sleep(10)
+    asyncio.sleep(30)
+    print("Stared macha")
     while True:
       await checksk(app,"long")
       # await asyncio.sleep(0.2)
@@ -77,6 +78,7 @@ async def backgen(app):
 if __name__ == "__main__": 
     
     app = Bot()
+
     asyncio.get_event_loop().create_task(backgen(app))
     app.run()
 
