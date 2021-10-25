@@ -63,7 +63,7 @@ class Bot(Client):
 
     async def start(self):
         await super().start()
-        asyncio.get_event_loop().create_task(backgen())
+        asyncio.create_task(backgen())
         log.info("<<[Bot Started]>>")
     async def stop(self, *args):
         await super().stop()
