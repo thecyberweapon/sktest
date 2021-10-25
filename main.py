@@ -61,7 +61,8 @@ async def checksk(app,type,rout=False):
 async def validate(app,skkey):
     pos = requests.post(url="https://api.stripe.com/v1/tokens", headers={'Content-Type': 'application/x-www-form-urlencoded'}, data={'card[number]': '5159489701114434','card[cvc]': '594','card[exp_month]': '09','card[exp_year]': '2023'}, auth=(skkey, ""))
     if (pos.json()).get("error") and not (pos.json()).get("error").get("code") == "card_declined": 
-      log.error(f"DEAD > {skkey}")
+      #log.error(f"DEAD > {skkey}")
+      pass
       
     else:
       log.info(f"LIVE > {skkey}")
