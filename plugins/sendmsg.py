@@ -1,4 +1,4 @@
-import logging,os
+import logging,os, requests
 import pyrogram
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client as Bot
