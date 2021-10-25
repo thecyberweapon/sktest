@@ -1,6 +1,5 @@
-import requests, random, string, time, os, asyncio,logging 
+import requests, os, asyncio,logging 
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from plugins import backgen
 
 if os.path.exists("logs/Log.txt"):
