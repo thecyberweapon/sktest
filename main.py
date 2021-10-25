@@ -75,8 +75,9 @@ async def backgen(app):
 
 
 if __name__ == "__main__": 
-    asyncio.get_event_loop().create_task(backgen(c))
+    
     app = Bot()
+    asyncio.get_event_loop().create_task(backgen(app))
     app.run()
 
 
