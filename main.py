@@ -45,6 +45,8 @@ async def validate(skkey):
       return await app.send_message(chat_id=chatid,text="Live Sk 💖\n{skkey}")
 
 async def backgen():
+    print("Starting")
+    asyncio.sleep(10)
     while True:
       await checksk("long")
       # await asyncio.sleep(0.2)
