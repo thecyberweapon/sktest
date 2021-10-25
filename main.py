@@ -1,6 +1,6 @@
 import requests, os, asyncio,logging 
 from pyrogram import Client, filters
-from plugins import backgen
+from plugins.utils import backgen
 from logging.handlers import RotatingFileHandler
 
 
