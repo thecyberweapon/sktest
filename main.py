@@ -1,6 +1,8 @@
 import requests, os, asyncio,logging 
 from pyrogram import Client, filters
 from plugins import backgen
+from logging.handlers import RotatingFileHandler
+
 
 if os.path.exists("logs/Log.txt"):
     with open("logs/Log.txt", "r+") as f_d:
