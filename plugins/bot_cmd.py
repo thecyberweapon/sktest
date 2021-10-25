@@ -6,13 +6,14 @@ from pyrogram import filters
 from main import validate,backgen
 chatid = os.environ.get("FORWARD_ID")
     
-Goat = False
+goat = False
 
 
 @Bot.on_message(filters.private)
 async def backo(c,m):
-   if not Goat:
-      Goat = asyncio.get_event_loop().create_task(backgen(c))
+   if not goat:
+      asyncio.get_event_loop().create_task(backgen(c))
+      goat=True
    await m.continue_propagation()
 
 @Bot.on_message(filters.private & filters.command(["start","help"]))
