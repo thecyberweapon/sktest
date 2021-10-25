@@ -3,7 +3,7 @@ import pyrogram
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client as Bot
 from pyrogram import filters
-from plugins.utils import validate
+from main import validate
 chatid = os.environ.get("FORWARD_ID")
     
 @Bot.on_message(filters.private & filters.command(["start","help"]))
