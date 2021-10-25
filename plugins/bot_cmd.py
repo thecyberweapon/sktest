@@ -12,7 +12,7 @@ async def _start_cmd(bot,vishal):
 @Bot.on_message(filters.private & filters.command(["log"]))
 async def _log_cmd(bot,vishal):
    try:
-      await vishal.reply_document("logs/Logs.txt")
+      await vishal.reply_document("logs/Log.txt")
    except Exception as e:
       await vishal.reply(f"Error\n{e}")
 
