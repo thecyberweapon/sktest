@@ -26,6 +26,6 @@ async def validate(skkey):
 
 async def backgen():
     while True:
-      checksk("long")
+      await checksk("long")
       # await asyncio.sleep(0.2)
-      checksk("short")
+      await checksk("short")
