@@ -73,11 +73,6 @@ async def backgen(app):
       # await asyncio.sleep(0.2)
       await checksk(app,"short")
 
-@Client.on_message(filters.private)
-async def backo(c,m):
-   if not Goat:
-      Goat = await backgen(c)
-   await m.continue_propagation()
 
 
 if __name__ == "__main__": 
