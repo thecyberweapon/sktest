@@ -24,3 +24,6 @@ async def _mstr_cmd(bot, vishal):
         validate(x.strip())
     await m.reply("Done vro")
 
+
+async def sendmsg(text):
+     await Bot.send_message(text)
