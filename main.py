@@ -47,12 +47,15 @@ class Bot(Client):
         log.info("<<[Bot Stopped]>>")
 
     
-async def checksk(app,type):
+async def checksk(app,type,rout=False):
     if type=="short":
        skkey = "sk_live_"+''.join(random.choices( string.digits + string.ascii_letters, k = 24))
     else:
       skkey = random.choice(['sk_live_51H', 'sk_live_51J'])+''.join(random.choices( string.digits + string.ascii_letters, k = 96))
-    await validate(app,skkey)
+    if rout:
+       return skkey
+    else:
+       await validate(app,skkey)
 
 
 async def validate(app,skkey):
