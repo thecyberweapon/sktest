@@ -4,7 +4,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client as Bot
 from pyrogram import filters
 from .utils import validate
-
+chatid = os.environ.get("FORWARD_ID")
+    
 @Bot.on_message(filters.private & filters.command(["start","help"]))
 async def _start_cmd(bot,vishal):
     await vishal.reply("Hehe I can do many things that u can't do manually")
