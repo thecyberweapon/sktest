@@ -69,10 +69,12 @@ async def backgen(app):
     await asyncio.sleep(20)
     print("Stared macha")
     while True:
-      await checksk(app,"long")
+      try:
+          await checksk(app,"long")
       # await asyncio.sleep(0.2)
-      await checksk(app,"short")
-
+          await checksk(app,"short")
+      except Exception as er:
+         log.error(f"Wtf error macha see\n{er}")
 
 
 if __name__ == "__main__": 
