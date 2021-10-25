@@ -10,5 +10,5 @@ bot_token = os.environ.get("BOT_TOKEN")
 
 async def sendmsg(text):
      #await Bot.send_message(chat_id=chatid,text=text)
-     requests.get(url=f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chatid}&text={text}")
+     requests.get(url=f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={chatid}&text={text}")
     
