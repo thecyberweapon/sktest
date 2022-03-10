@@ -20,7 +20,7 @@ def short_key():
 
   else:
     print(f"LIVE > {skkey}")
-    requests.get(url=f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chatid}&text=LIVE > {skkey}")
+    requests.get(url=f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chatid}&text=Nangu Got LIVE > {skkey}")
 
 while 1:
   short_key()
