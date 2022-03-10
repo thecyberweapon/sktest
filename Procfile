@@ -1,1 +1,1 @@
-StripeGen: python main.py
+SammyFlex: python main.py
