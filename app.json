@@ -11,7 +11,7 @@
     "env": {
         "FORWARD_ID": {
             "description": "Your UserID/Chat ID to forward live sk keys to",
-            "required": true,
+            "required": false,
             "value": ""
         },
         "BOT_TOKEN": {
