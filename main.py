@@ -1,6 +1,6 @@
-import requests, /
-       random,/
-       string, /
+import requests, \
+       random,\
+       string, \
        os
 
 token = os.environ.get("BOT_TOKEN")
