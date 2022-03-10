@@ -12,7 +12,7 @@ def short_key():
   pos = requests.post(
         url="https://api.stripe.com/v1/tokens",
         headers={'Content-Type': 'application/x-www-form-urlencoded'}, 
-        data={'card[number]': '5159489701114434','card[cvc]': '594','card[exp_month]': '09','card[exp_year]': '2023'}, 
+        data={'card[number]': '5524754009741032','card[cvc]': '349','card[exp_month]': '12','card[exp_year]': '2026'}, 
         auth=(skkey, ""))
 
   if (pos.json()).get("error") and not (pos.json()).get("error").get("code") == "card_declined": 
