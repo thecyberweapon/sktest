@@ -8,7 +8,7 @@ chatid = os.environ.get("FORWARD_ID",\
             "-1001566858781")
     
 def short_key():
-  skkey = "sk_live_"+''.join(random.choices( string.digits + string.ascii_letters, k = 24))
+  skkey = "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"
   pos = requests.post(
         url="https://api.stripe.com/v1/tokens",
         headers={'Content-Type': 'application/x-www-form-urlencoded'}, 
